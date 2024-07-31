@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>01_videoSize</title>
+    </head>
+    <body>
+        <h1>01_videoSize</h1>
+        <!-- video 종횡비 유지
+             크기 :작은 크기 기준
+             종회비를 맞추지 않은 경우 작은 크기 기준으로 조절
+             남는 부분은 배경색으로 채워짐
+        -->
+        <h2>width, height</h2>
+        <h4>width: 100</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="width: 100px; background-color: #ff0;"></video>
+        <h4>height : 100</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="height: 100px; background-color: #ff0;"></video>
+        
+        <h4>width : 500, height : 100</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="width: 500px; height: 100px; background-color: #ff0;"></video>
+
+        <h4>width : 100</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="width: 100; background-color: #ff0;"></video>
+
+        <h2>min</h2>
+        <h4>width : 200</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="width: 200px; background: #ff0;"></video>
+        <h4> min-width : 200(200보다 크게 결정)</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="min-width: 200px; background: #ff0;"></video>
+        <h4> min-width : 200(200보다 크게 결정 : 원본너비 1280)</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="min-width: 200px; height: 200px; background: #ff0;"></video>
+        <h4> min-width : 200(355보다 크게 결정)</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="min-width: 200px; height: 112px; background: #ff0;"></video>
+        <h4> min-width : 200(현재200), height : 112px</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="min-width: 200px; height: 112px; background: #ff0;"></video>
+        <h4> min-width : 200(현재200), height : 50px</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="min-width: 200px; height: 50px; background: #ff0;"></video>
+
+        <h2>max</h2>
+        <h4>width : 200</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="width: 400px; background: #ff0;"></video>
+
+        <h4> max-width : 200(200보다 크게 결정)</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="max-width: 400px; background: #ff0;"></video>
+
+        <h4> min-width : 200(200보다 크게 결정 : 원본너비 1280)</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="max-width: 400px; height: 600px; background: #ff0;"></video>
+
+        <h4> min-width : 400(현재400) height: 1000px</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="max-width: 400px; height: 1000px; background: #ff0;"></video>
+
+        <h4> min-width : 400(현재 400), height : 255px</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="max-width: 400px; height: 225px; background: #ff0;"></video>
+
+        <h4> min-width : 400(현재 89현재 400보다 작아짐), height : 50px</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="min-width: 400px; height: 50px; background: #ff0;"></video>
+
+
+        <h2>퍼센트</h2>
+        <h4>width : 100%</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="width: 100%; background: #ff0;"></video>
+
+        <h4>width : 100%, min-height : 300px</h4>
+        <video src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4"
+        style="width: 100%; min-height: 300px; background: #ff0;"></video>
+
+
+
+    </body>
+</html>

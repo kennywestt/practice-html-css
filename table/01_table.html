@@ -1,0 +1,290 @@
+<html>
+    <head>
+        <title>table</title>
+    </head>
+    <body>
+        <h1>01_table</h1>
+        <table border=""> <!-- 표-->
+            <tr> <!-- 행-->
+                <td> <!-- 열 -->
+                    1행1열
+                </td>
+                <td> <!-- 열 -->
+                    1행2열
+                </td>
+                <td> <!-- 열 -->
+                    1행3열
+                </td>
+            </tr>
+
+            <tr> <!-- 행-->
+                <td> <!-- 열 -->
+                    2행1열
+                </td>
+                <td> <!-- 열 -->
+                    2행2열
+                </td>
+                <td> <!-- 열 -->
+                    2행3열
+                </td>
+            </tr>
+
+            <tr> <!-- 행-->
+                <td> <!-- 열 -->
+                    3행1열
+                </td>
+                <td> <!-- 열 -->
+                    3행2열
+                </td>
+                <td> <!-- 열 -->
+                    3행3열
+                </td>
+            </tr>
+
+            <tr> <!-- 행-->
+                <td> <!-- 열 -->
+                    4행1열
+                </td>
+                <td> <!-- 열 -->
+                    4행2열
+                </td>
+                <td> <!-- 열 -->
+                    4행3열
+                </td>
+            </tr>
+
+            <!-- 잘못 된 표기법 -->
+            <!--
+            <td>5행</td>
+            <td>6행</td>
+            <td>7행</td>
+            <td>8행</td>
+
+            <tr>
+                <td>4행1열</td>
+                <td>4행2열</td>
+                <td>4행3열</td>
+            </tr>
+
+            <tr>
+                <tr>
+                    <td>4행 1열</td>
+                </tr>
+            </tr>
+            -->
+        </table>
+
+        <h2>테이블 크기</h2>
+        <!-- 
+        변경이 가능할 경우
+        td > tr > table
+        속성을 유동적으로 처리못할 경우 큰값 우선
+        -->
+        <!-- 표 전체 크기 -->
+        <table border="" height="60px">
+            <tr height="20px">
+                <td width="100px"></td>
+                <td width="100px"></td>
+                <td width="100px"></td>
+            </tr>
+
+            <tr height="5px" width="50px">
+                <td width="50px"></td>
+                <td width="200px"></td>
+                <td height="40px"></td>
+            </tr>
+
+            <tr height="30px" width="200px">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr height="50px">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h2>색상</h2>
+        <table border="" bgcolor="#ff0">
+            <tr height="10px">
+                <td width="30px"></td>
+                <td width="30px"></td>
+            </tr>
+
+            <tr height="10px" bgcolor="#0f0">
+                <td bgcolor="#00f"></td>
+                <td></td>
+            </tr>
+
+            <tr height="10px" bgcolor="#f00">
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h2>병합</h2>
+        <table border="" width="300px" height="200px">
+            <tr>
+                <td>1-1</td>
+                <td colspan="2">1_2</td>   <!-- 같은 행에 있는 열들을 합칠 때 -->
+                <!-- <td>1_3</td> -->
+            </tr>
+
+            <tr height="30px">
+                <td>2_1</td>
+                <td rowspan="2">2_2</td> <!-- 같은 열에 있는 행들을 합칠 때-->
+                <td>2_3</td>
+            </tr>
+
+            <tr height="30px">
+                <td>3_1</td>
+                <!-- <td>3_2</td> -->
+                <td>3_3</td>
+            </tr>
+
+            <tr height="30px">
+                <td colspan="3"> <!-- 행에 있는 모들 열들을 합침-->
+                    <table border="" width="300px">
+                        <tr height="30px">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <h2>테두리</h2>
+        <table border="">
+            <tr height ="1opx">
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table border="5">
+            <tr height ="1opx">
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table border="">
+            <tr height ="1opx">
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h2>cellspacing</h2>                <!-- cellspacing-->
+        <table border="" cellspacing="10">
+            <tr height ="1opx">
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table border="" cellspacing="5">
+            <tr height ="1opx">
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table border="" cellspacing="0">
+            <tr height ="1opx">
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+                <td width ="2opx"></td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h2>cellpadding</h2>                <!--cellpadding-->
+        <table border="" cellpadding="10">
+            <tr height ="1opx">
+                <td width ="2opx">1_1</td>
+                <td width ="2opx">1_2</td>
+                <td width ="2opx">1_3</td>
+            </tr>
+
+            <tr height ="1opx">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table border="5" cellpadding="5">
+            <tr height="1opx">
+                <td width ="2opx">2_1</td>
+                <td width ="2opx">2_2</td>
+                <td width ="2opx">2_3</td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table border="" cellpadding="0">
+            <tr height ="1opx">
+                <td width ="2opx">3_1</td>
+                <td width ="2opx">3_2</td>
+                <td width ="2opx">3_3</td>
+            </tr>
+
+            <tr height ="1opx">
+                <td ></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </body>
+</html>

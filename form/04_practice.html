@@ -1,0 +1,55 @@
+<html>
+    <head><title></title></head>
+    <body>
+        <h1>04_label</h1>
+        <form action="05_labelReg.html">
+            <fieldset>
+            <h2>회원가입</h2>
+            <h4>회원이 되어 다양한 혜택을 경험해 보세요!</h4>
+
+            <!-- type="hidden" : 화면에 보이지 않으나 parameter 전송 -->
+            <input type="hidden" name="kind" value="stud">
+            <!--
+                label : 폼요소에 이름 붙이는 태그
+                for : 폼요소 id 가 같으면 연결
+                    for 생략 및 label 하위요소에 form 존재 시 연결
+            -->
+            <label for="iid"><strong>아이디</strong>
+                <br>
+                <input type="text" name="id" id="iid">
+            </label>
+                <br>
+            <label for="ipw"><strong>패스워드</strong><br>
+                <input type="password" name="pw" id="ipw">
+            </label>
+            <br>
+            <label for="rpw"><strong>패스워드 확인</strong><br>
+                <input type="password" name="pw" id="rpw">
+            </label>
+            <br>
+            <label for="pname"><strong>이름</strong>
+                <br>
+                <input type="text" name="name" id="pname">
+            </label>
+            <br>
+            <label for="telid"><strong>전화번호</strong>
+                <br>
+                <input type="tel" name="telephone" id="telid">
+            </label>
+            <br>
+            <label for="addr"><strong>주소</strong>
+                <br>
+                <input type="text" name="address" id="addr">
+            </label>
+            <br>
+            <label for="date"><strong>생년월일</strong>
+                <br>
+                <input type="date" name="" id="date">
+            </label><br><br>
+            <button type="submit" style="background-color: aqua;">가입하기</button>
+            <button style="background-color: yellow;">가입취소</button>
+
+        </fieldset>
+        </form>
+    </body>
+</html>

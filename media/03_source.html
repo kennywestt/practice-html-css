@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>03_source</title>
+    </head>
+    <body>
+        <h1>03_source</h1>
+        <video width="600px" muted autoplay>
+            <!-- 브라우저에 맞춰 실행가능한 영상으로 재생 
+                3개다 재생 가능할 경우 맨처음 것이 재생 -->
+            <source src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4">
+            <source src="../ffffff/mmm/SampleVideo_1280x720_5mb.mp4">
+            <source src="../ffffff/mmm/sons.mp4">
+        </video>
+
+        <video width="600px" muted autoplay>
+            <!-- 브라우저에 맞춰 실행가능한 영상으로 재생
+                 nomovie.mp4가 없으므로 sons.mp4 재생 -->
+            <source src="../ffffff/mmm/nomovie.mp4">
+            <source src="../ffffff/mmm/sons.mp4">
+        </video>
+
+        <hr>
+        <table>
+            <tr>
+                <td><video width="200px" muted autoplay loop>
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp41">
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_5mb.mp41">
+                    <source src="../ffffff/mmm/sons.mp4">
+                </video></td>
+                    
+                <td><video width="200px" muted autoplay loop>
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp41">
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_5mb.mp41">
+                    <source src="../ffffff/mmm/sons.mp4">
+                </video></td>
+            </tr>
+            <tr>
+                <td><video width="200px" muted autoplay loop>
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp41">
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_5mb.mp41">
+                    <source src="../ffffff/mmm/sons.mp4">
+                </video></td>
+
+                <td><video width="200px" muted autoplay loop>
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp41">
+                    <source src="../ffffff/mmm/SampleVideo_1280x720_5mb.mp41">
+                    <source src="../ffffff/mmm/sons.mp4">
+                </video></td>
+            </tr>
+            </table>
+
+            <h2>media</h2>
+             <!-- 크기에 따른 재생 source 변경
+            -->
+             <video width="100%" muted autoplay>
+                <source media="(min-width: 1000px)" src="../ffffff//mmm/SampleVideo_1280x720_1mb.mp4">
+                <!-- 700px 이상 1000미만 -->
+                <source media="(min-width: 700px)" src="../ffffff//mmm/sons.mp4">
+                <source src="../ffffff//mmm/sea.mp4">
+             </video>
+             <hr>
+
+             <h2>반응형 쿼리</h2>
+             <video width="100%" muted autoplay>
+                <!-- 브라우저에 맞춰 실행가능한 영상으로 재생 
+                    3개다 재생 가능할 경우 맨처음 것이 재생 -->
+                <source media="(min-width: 1000px)" src="../ffffff/mmm/SampleVideo_1280x720_1mb.mp4">
+                <source media="(min-width: 700px)" src="../ffffff/mmm/SampleVideo_1280x720_5mb.mp4">
+                <source src="../ffffff/mmm/sons.mp4">
+            </video>
+    
+            <video width="100%" muted autoplay>
+                <!-- 브라우저에 맞춰 실행가능한 영상으로 재생
+                     nomovie.mp4가 없으므로 sons.mp4 재생 -->
+                <source media="(min-width: 1000px)" src="../ffffff/mmm/nomovie.mp4">
+                <source media="(min-width: 700px)" src="../ffffff/mmm/sons.mp4">
+            </video>
+    </body>
+</html>

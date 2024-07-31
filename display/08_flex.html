@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .big{
+            width: 600px;
+            height: 300px;
+            background-color: #ff0;
+            margin: 20px;
+            display: flex; /* float left를 하지 않아도 잘 붙누*/
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: #0ff;
+            border: 1px solid #555;
+        }
+        .row{
+            flex-direction: row; /* 기본값 */
+
+        }
+        .row_r{
+            flex-direction: row-reverse;
+        }
+        .col{
+            flex-direction: column;
+        }
+        .column_r{
+            flex-direction: column-reverse;
+        }
+        .item_c{
+            align-items: center;
+        }
+        .justify_c{
+            justify-content: center;
+        }
+        .justify-space-between{
+            justify-content: space-between;
+        }
+        .justify-space-around{
+            justify-content: space-around;
+        }
+        .justify-space-evenly{
+            justify-content: space-evenly;
+        }
+        .wrap{
+            flex-wrap: wrap;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .wrap-r{
+            flex-wrap: wrap-reverse;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>08_flex</h1>
+    <h2>기본</h2>
+    <div class="big">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>row-reverse</h2>
+    <div class="big row_r">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>column</h2>
+    <div class="big col">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+    
+    <h2>column-reverse</h2>
+    <div class="big column_r">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>align-item_center</h2>
+    <div class="big item_c">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>justify-content_center</h2>
+    <div class="big justify_c">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>align-item_center && justify_center</h2>
+    <div class="big justify_c item_c">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+    <!-- c -->
+    <h2>column && align-item_center</h2>
+    <div class="col big item_c">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>column && justify-content_center</h2>
+    <div class="col big justify_c">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>column && align-item_center && justify_center</h2>
+    <div class="col big justify_c item_c">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+    <!--  -->
+    <h2>justify-content : space-between</h2>
+    <div class="big justify-space-between">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>justify-content : space-around</h2>
+    <div class="big justify-space-around">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>justify-content : space-evenly</h2>
+    <div class="big justify-space-evenly">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>align-item_center && justify-space-evenly && item_center</h2>
+    <div class="big align-item_center justify-space-evenly item_c">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    </div>
+
+    <h2>wrap && align-item_center && justify-space-evenly</h2>
+    <div class="big align-item_center justify-space-evenly wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+        <div class="box">box11</div>
+        <div class="box">box12</div>
+        <div class="box">box13</div>
+        <div class="box">box14</div>
+        <div class="box">box15</div>
+        <div class="box">box16</div>
+    </div>
+
+    <h2>nowrap && align-item_center && justify-space-evenly</h2>
+    <div class="wrap big align-item_center justify-space-evenly">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+        <div class="box">box11</div>
+        <div class="box">box12</div>
+        <div class="box">box13</div>
+        <div class="box">box14</div>
+        <div class="box">box15</div>
+        <div class="box">box16</div>
+    </div>
+
+    <h2>wrap-reverse</h2>
+    <div class="big wrap-r align-item_center justify-space-evenly wrap">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+        <div class="box">box7</div>
+        <div class="box">box8</div>
+        <div class="box">box9</div>
+        <div class="box">box10</div>
+        <div class="box">box11</div>
+        <div class="box">box12</div>
+        <div class="box">box13</div>
+        <div class="box">box14</div>
+        <div class="box">box15</div>
+        <div class="box">box16</div>
+    </div>
+</body>
+</html>
