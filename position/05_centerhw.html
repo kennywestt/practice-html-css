@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_centerhw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            width: 100%;
+            height: 100%
+        }
+        .longbox{
+            float: left;
+            /* display: flex; */
+            width: 400%;
+            height: 100%;
+        }
+        .wrapper{
+            position: relative;
+            left: 0px;
+            top: 0px;
+            background-color: #ff0;
+            /*  image가 4개이므로 100 / 4 = 25이므로 25%
+                or 위에 주석처리된 display: flex;를 추가하면 된다.*/
+            width: 25%;
+            height: 100%;
+            float: left;
+            
+        }
+        .section{
+            position: absolute;
+            overflow: hidden;
+            left: 0px;
+            top: 0px;
+            background-color: #0f0;
+            width: 500px;
+            height: 400px;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="longbox">
+    <div class="wrapper">
+         <div class="section">
+            <img src="../ffffff/1.jpg" alt="">
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="section">
+            <img src="../ffffff/2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="section">
+            <img src="../ffffff/3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="wrapper">
+        <div class="section">
+        <img src="../ffffff/4.jpg" alt="">
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

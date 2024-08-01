@@ -10,8 +10,8 @@
             padding: 0;
         }
         div{
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             border: 1px solid #000;
         }
         /* position */
@@ -38,19 +38,50 @@
             bottom: 25px;
             background-color: rgba(0, 0, 255, 0.3);
         }
+        .sub{
+            width: 50px;
+            height: 30px;
+            border: 1px solid #000;
+            left: 200px;
+            top: 50px;
+        }
     </style>
 </head>
 <body>
     <div class="st box1">static1</div>
     <div class="st box2">static2</div>
     <div class="st box3">static3</div>
+        <!-- static > static 좌표이동X
+             static > relative 좌표이동O (현재위치 기준)
+             static > absolute 좌표이동O (부모 중 가장 가까운 absolute or relative 기준)
+        -->
+    <div class="sub st">sub st</div>
+    <div class="sub re">sub st</div>
+    <div class="sub ab">sub st</div>
 
     <div class="re box1">relative1</div>
     <div class="re box2">relative2</div>
+    <!--    relative > static 좌표이동X
+            relative > relative 좌표이동O (현재위치 기준)
+            relative > absolute 좌표이동O (부모 중 가장 가까운 absolute or relative 기준)
+        -->
+        <div class="sub st">re>st</div>
+        <div class="sub re">re>st</div>
+        <div class="sub ab">re>st</div>
     <div class="re box3">relative3</div>
 
     <div class="ab box1">absolute1</div>
     <div class="ab box2">absolute2</div>
+    <!--    absolute > static 좌표이동X 
+            absolute > relative 좌표이동O (현재위치 기준)
+            absolute > absolute 좌표이동O (부모 중 가장 가까운 absolute or relative 기준)
+        -->
+        <div class="sub st">ab>st</div>
+        <div class="sub re">ab>st</div>
+        <div class="sub ab">ab>st</div>
     <div class="ab box3">absolute3</div>
+
+    
+
 </body>
 </html>

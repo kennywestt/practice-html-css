@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_sra</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .big_static{
+        position: static;
+        width: 400px;
+        height: 400px;
+        background-color: yellow;
+    }
+    .big_relative{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: #0f0;
+    }
+    .big_absolute{
+        position: relative;
+        width: 400px;
+        height: 400px;
+        background-color: #00f;
+    }
+    .small_static{
+        width: 100px;
+        height: 100px;
+        background-color: rgba(255, 0, 0, 0.3);
+        border: 1px solid #000;
+        position: static; /* 이동불가 */
+        left: 80px;
+        top: 40px;
+    }
+    .small_relative{
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 255, 0, 0.3);
+        border: 1px solid #000;
+        position: relative; /* 현재 위치 기준 */
+        left: 80px;
+        top: 40px;
+    }
+    .small_absolute{
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 255, 0.3);
+        border: 1px solid #000;
+        position: absolute; /* 부모 위치 기준 */
+        left: 80px;
+        top: 40px;
+    }
+</style>
+<body>
+    <h1>04_sra</h1>
+    <h2>부모가 static</h2>
+    <div class="big_static">
+        <div class="small_static">static_static</div>
+        <div class="small_relative">relative_static</div>
+        <div class="small_absolute">absolute_static</div>
+    </div>
+    <br>
+    <hr>
+    <h2>부모가 relative</h2>
+    <div class="big_relative">
+        <div class="small_static">static_relative</div>
+        <div class="small_relative">relative_relative</div>
+        <div class="small_absolute">absolute_relative</div>
+    </div>
+    <br>
+    <hr>
+    <h2>부모가 absolute</h2>
+    <div class="big_absolute">
+        <div class="small_static">static_absolute</div>
+        <div class="small_relative">relative_absolute</div>
+        <div class="small_absolute">absolute_absolute</div>
+    </div>
+</body>
+</html>
