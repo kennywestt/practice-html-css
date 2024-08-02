@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_sticky_slide</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            position: relative;
+            width: 600px;
+            height: 320px;
+            border: 1px solid rgba(255, 0, 0);
+            overflow: auto;
+            margin: 100px 0px;
+        }
+        .long{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: flex;
+            width: 2400px;
+            height: 280px;
+        }
+        img{
+            width: 600px;
+            height: 300px;
+        }
+        .btn{
+            position: sticky;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 0, 0.5);
+            border-radius: 25px;
+            left: 0px;
+            top: 125px;
+            text-align: center;
+            line-height: 45px;
+            font-size: 2rem;
+            z-index: 1;
+        }
+
+        .back{
+            left: 0px;
+        }
+        .next{
+            left: 550px;
+        }
+        .top{
+            position: fixed;
+            width: 100px;
+            height: 40px;
+            background-color: rgba(255, 0, 0, 0.4);
+            text-align: center;
+            line-height: 40px;
+            font-size: 2rem;
+            bottom: 100px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tt">09_sticky_slide</h1>
+    <a class="top" href="#tt">top</a>
+    
+    <div class="wrapper">
+        <div class="btn back"><</div>
+        <div class="btn next">></div>
+        <div class="long">
+            <img src="../ffffff/1.jpg" alt="">
+            <img src="../ffffff/2.jpg" alt="">
+            <img src="../ffffff/3.jpg" alt="">
+            <img src="../ffffff/4.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="btn back"><</div>
+        <div class="btn next">></div>
+        <div class="long">
+            <img src="../ffffff/4.jpg" alt="">
+            <img src="../ffffff/3.jpg" alt="">
+            <img src="../ffffff/2.jpg" alt="">
+            <img src="../ffffff/1.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="btn back"><</div>
+        <div class="btn next">></div>
+        <div class="long">
+            <img src="../ffffff/3.jpg" alt="">
+            <img src="../ffffff/4.jpg" alt="">
+            <img src="../ffffff/1.jpg" alt="">
+            <img src="../ffffff/2.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
