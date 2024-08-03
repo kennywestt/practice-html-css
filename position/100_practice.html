@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Example</title>
+</head>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.relative-section {
+    position: relative;
+    padding: 50px;
+    margin-top: 60px; /* To avoid being hidden under the fixed header */
+    background-color: #f0f0f0;
+}
+
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: #ff6347;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-section {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background-color: #2196F3;
+    color: white;
+    margin-top: 20px;
+}
+</style>
+    <header class="fixed-header">Fixed 헤더</header>
+    <main>
+        <section class="relative-section">
+            <div class="absolute-box">Absolute 박스</div>
+            <p>relative section 컨텐트</p>
+        </section>
+        <section class="sticky-section">Sticky 섹션</section>
+    </main>
+    <footer class="fixed-footer">Fixed Footer</footer>
+</body>
+</html>
