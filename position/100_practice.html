@@ -4,70 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000; 
+        }
+
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .relative-section {
+            position: relative;
+            padding: 50px;
+            margin-top: 60px;
+            background-color: #f0f0f0;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: #ff6347;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sticky-section {
+            position: sticky;
+            top: 0;
+            padding: 20px;
+            background-color: #2196F3;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .content-section {
+            padding: 20px;
+            background-color: #e0e0e0;
+            margin: 20px 0;
+        }
+        
+        .additional-section {
+            padding: 20px;
+            background-color: #d0d0d0;
+            margin: 20px 0;
+        }
+    </style>
 </head>
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.fixed-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    z-index: 1000; /* Ensures it stays on top */
-}
-
-.fixed-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-.relative-section {
-    position: relative;
-    padding: 50px;
-    margin-top: 60px; /* To avoid being hidden under the fixed header */
-    background-color: #f0f0f0;
-}
-
-.absolute-box {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 150px;
-    height: 150px;
-    background-color: #ff6347;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sticky-section {
-    position: sticky;
-    top: 0;
-    padding: 20px;
-    background-color: #2196F3;
-    color: white;
-    margin-top: 20px;
-}
-</style>
+<body>
     <header class="fixed-header">Fixed 헤더</header>
     <main>
         <section class="relative-section">
             <div class="absolute-box">Absolute 박스</div>
             <p>relative section 컨텐트</p>
         </section>
+        <section class="content-section">
+            <h2>첫 번째 추가 섹션</h2>
+            <p>여기에는 좀 더 많은 텍스트가 포함될 수 있습니다. 이 섹션은 콘텐츠를 보여주기 위해 추가되었습니다.</p>
+        </section>
         <section class="sticky-section">Sticky 섹션</section>
+        <section class="content-section">
+            <h2>두 번째 추가 섹션</h2>
+            <p>여기에는 다른 텍스트가 포함될 수 있습니다. 이 섹션도 콘텐츠를 보여주기 위해 추가되었습니다.</p>
+        </section>
+        <section class="additional-section">
+            <h2>추가된 섹션</h2>
+            <p>이것은 추가된 섹션입니다. 다양한 콘텐츠를 포함하여 페이지를 더 풍성하게 만듭니다.</p>
+            <p>이 섹션에서는 다른 레이아웃과 콘텐츠를 보여줄 수 있습니다.</p>
+        </section>
     </main>
     <footer class="fixed-footer">Fixed Footer</footer>
 </body>
