@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_hw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .menus{
+            width: 400px;
+            height: 100px;
+            display: flex;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .menus > dl {
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            transition-duration: 0.5s;
+        }
+
+        .menus > dl:hover {
+            height: 170px;
+        }
+
+        .menus > dl > dt {
+            width: 100px;
+            height: 50px;
+            background-color: #fa0;
+            text-align: center;
+            line-height: 50px;
+        }
+        .menus > dl > dd {
+            width: 80px;
+            height: 40px;
+            margin-left: 20px;
+            background-color: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <h1>08_hw</h1>
+    <div class="wrapper">
+    <div class="menus">
+        <dl>
+            <dt>회사 소개</dt>
+            <dd>인사말</dd>
+            <dd>인사개</dd>
+            <dd>인사소</dd>
+        </dl>
+        <dl>
+            <dt>제품</dt>
+            <dd>니품</dd>
+            <dd>내품</dd>
+            <dd>그놈품</dd>
+        </dl>
+        <dl>
+            <dt>갤러리</dt>
+            <dd>봄</dd>
+            <dd>여름</dd>
+            <dd>여~~름</dd>
+        </dl>
+        <dl>
+            <dt>고객</dt>
+            <dd>공지사항</dd>
+            <dd>자주찾는질문</dd>
+            <dd>질문및답변</dd>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_galleryhw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper {
+            position: relative;
+        }
+        .wrapper > div {
+            position: relative;
+            float: left;
+        }
+        /* 썸네일 */
+        .wrapper > div:first-of-type {
+            width: 500px;
+            height: 80px;
+            display: flex;
+        }
+        label > img {
+            width: 100px;
+            height: 60px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            background-color: #ccc;
+        }
+
+        /* 큰 이미지 */
+        .wrapper > div:last-of-type{
+            width: 422px;
+            height: 328px;
+        }
+
+        input + img {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 400px;
+            height: 300px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            opacity: 0;
+            transition-duration: 0.5;
+        }
+
+        input:checked + img{
+            opacity: 1;
+        }
+
+        input{
+            display: none;
+        }
+
+        label{
+            opacity: 0.3;
+        }
+        label:hover{
+            opacity: 1;
+            background-color: red;
+        }
+
+        .wrapper > div:last-of-type > input:checkd{
+            background-color: red;
+            opacity: 1;
+        }
+        
+
+
+        /* #email_chk:checked ~ select{
+            display: none;
+        }
+        #email3, #email_chk{
+            display: none;
+        }
+
+        #email_chk:checked ~ #email3{
+            display: inline-block;
+        }
+     */
+    </style>
+</head>
+<body>
+    <h1>09_galleryhw</h1>
+    <div class="wrapper">
+        <div>
+            <label for="c1">
+                <img src="../ffffff/1.jpg" alt="">
+            </label>
+            <label for="c2">
+                <img src="../ffffff/2.jpg" alt="">
+            </label>
+            <label for="s2">
+                <img src="../ffffff/3.jpg" alt="">
+            </label>
+            <label for="s3">
+                <img src="../ffffff/4.jpg" alt="">
+            </label>
+        </div>
+
+        <div>
+            <input type="radio" name="big" id="c1">
+            <img src="../ffffff/1.jpg" alt="">
+            <input type="radio" name="big" id="c2">
+            <img src="../ffffff/2.jpg" alt="">
+            <input type="radio" name="big" id="s2">
+            <img src="../ffffff/3.jpg" alt="">
+            <input type="radio" name="big" id="s3">
+            <img src="../ffffff/4.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
