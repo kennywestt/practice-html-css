@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_gradient</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-image: url("../ffffff/yellow.jpg");
+        background-size: 200px 100px;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border: 1px solid #000;
+    }
+    .box:nth-of-type(1){
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+        background: linear-gradient(to bottom,
+        #1e5799 0%,
+        #2989d8 50%,
+        #207cca 51%,
+        #7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     
+    }
+    .box:nth-of-type(2){
+        background: linear-gradient(135deg,
+        #1e5799 0%,
+        #2989d8 50%,
+        #207cca 51%,
+        #7db9e8 100%);
+    }
+    .box:nth-of-type(3){
+        background: radial-gradient(ellipse at center,
+        #1e5799 0%,
+        #2989d8 50%,
+        #207cca 51%,
+        #7db9e8 100%);
+    }
+
+    .box:nth-of-type(4){
+        background: radial-gradient(ellipse at center,
+        #000000 0%,
+        #0400ff 27%,
+        #fcf400 69%,
+        #ff0000 100%);
+    }
+    .box:nth-of-type(5){
+        background: linear-gradient(135deg,
+        #ff00fa 1%,
+        #ff00fa 30%,
+        #0400ff 31%,
+        #0400ff 57%,
+        #fcf400 58%,
+        #fcf400 81%,
+        #ff0000 82%,
+        #ff0000 100%);
+    }
+    .box:nth-of-type(6){
+        background: linear-gradient(135deg,
+        rgba(255,0,250,1) 0%,
+        rgba(255,0,250,0.96) 1%,
+        rgba(72,0,254,0) 25%,
+        rgba(4,0,255,0.36) 34%,
+        rgba(128,122,128,1) 50%,
+        rgba(252,244,0,0.36) 66%,
+        rgba(253,179,0,0) 75%,
+        rgba(255,0,0,1) 100%);
+    }
+</style>
+<body>
+    <h1>01_gradient</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

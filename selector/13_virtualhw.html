@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_virtualhw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            position: relative;
+            width: 800px;
+            height: 530px;
+            /* border: 1px solid rgba(255, 0, 0); */
+            overflow: auto;
+            margin: 0px 100px;
+        }
+
+        .long{
+            position: absolute;
+            width: 2300px;
+            height: 550px;
+            left: 0px;
+            top: 0px;
+            display: flex;
+        }
+        /* .box2{
+            text-align: center;
+            line-height: 60px;
+            background-color: #ff0;
+            width: 60px;
+            height: 60px;
+            border-radius: 45px;
+            z-index: 5;
+            position: absolute;
+            left: 200px;
+            top: -5px;
+        } */
+        .box{
+            width: 250px;
+            height: 500px;
+            border: 2px solid #ccc;;
+            border-radius: 45px;
+            /* float: left; */
+            margin:5px;
+            background-color: aliceblue;
+            text-align: center;
+            
+        }
+        
+
+        .box > p::before {
+            content: "BEST 1";
+            display: block;
+            text-align: center;
+            line-height: 60px;
+            background-color: #ff0;
+            width: 60px;
+            height: 60px;
+            border-radius: 45px;
+            z-index: 5;
+            position: absolute;
+            left: 200px;
+            top: -5px;
+        }
+
+        img{
+            width: 250px;
+            height: 200px;
+            border-radius: 45px 45px 0 0;
+        }
+        .top{
+            position: fixed;
+            width: 100px;
+            height: 40px;
+            background-color: rgba(255, 0, 0, 0.4);
+            text-align: center;
+            line-height: 40px;
+            font-size: 2rem;
+            bottom: 100px;
+            right: 50px;
+            z-index: 1;
+        }
+        .menu{
+            position: fixed;
+            text-align: center;
+            top: 0px;
+            left: 0px;
+            background-color: #6D66DE;
+            z-index: 10;
+        }
+    
+        #num1{
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        #num2{
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        #num3{
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        #num4{
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="top" href="#num1">top</a>
+    <table class="menu">
+        <tr width="1000" height="35">
+            <td width="250"><a href="#num1">상세정보</a></td>
+            <td width="250"><a href="#num2">리뷰</a></td>
+            <td width="250"><a href="#num3">Q&A</a></td>
+            <td width="250"><a href="#num4">반품/교환정보</a></td>
+          </tr>
+    </table>
+    <h1 id="num1">상세정보</h1>
+    <div class="wrapper">
+    <div class="long">
+        <div class="box box2"> <img src="../ffffff/img/apple_image01.jpg" alt=""><p>BEST</p><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
+        <div class="box box2"> <img src="../ffffff/img/apple_image02.jpg" alt=""><p>BEST</p><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box box2"> <img src="../ffffff/img/apple_image03.jpg" alt=""><p>BEST</p><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image01.jpg" alt=""><p></p><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
+        <div class="box"> <img src="../ffffff/img/apple_image02.jpg" alt=""><p></p><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image03.jpg" alt=""><p></p><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image01.jpg" alt=""><p></p><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
+        <div class="box"> <img src="../ffffff/img/apple_image02.jpg" alt=""><p></p><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image03.jpg" alt=""><p></p><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+    </div>
+    </div>
+
+    <h1 id="num2">리뷰</h1>
+    <div class="wrapper">
+    <div class="long">
+        <div class="box"> <img src="../ffffff/img/small02.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/small01.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/large03.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/small02.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/small01.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/large03.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/small02.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/small01.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/large03.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+    </div>
+    </div>
+
+    <h1 id="num3">Q&A</h1>
+    <div class="wrapper">
+    <div class="long">
+        <div class="box"> <img src="../ffffff/home_02_04.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_02.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_03.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_04.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_02.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_03.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_04.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_02.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/home_02_03.jpg" alt=""><h2>Lorem ipsum</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <h1 id="num4">반품/교환정보</h1>
+    <div class="wrapper">
+    <div class="long">
+        <div class="box"> <img src="../ffffff/yellow.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/red.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/blue.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/yellow.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/red.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/blue.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/yellow.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/red.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/blue.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+    </div>
+    </div>
+</body>
+</html>

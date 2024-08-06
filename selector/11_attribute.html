@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_attribute</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 50px;
+            margin: 10px;
+            border: 1px solid #999;
+        }
+        div[ttt-data=abc]{ /* 정확하게 일치하는 값만 빨간색: abc */
+            color: #f00;
+        }
+        div[ttt-data~=abc]{ /* 단어형태, 띄어쓰기 : abc,abc, qew, zz abc fdew */
+            font-weight: 700;
+        }
+        div[ttt-data|=abc]{ /* 단어형태, 시작 : abc, abc-qwe*/
+            font-style: italic;
+        }
+        div[ttt-data*=abc]{ /*포함 : abc, abc qwe, abc-qwe,aabasdfadsfgsdc,zzabcewew, zz abc fdew,zz_abc_fdew, zzevfeabc*/
+            text-decoration: underline;
+        }
+        div[ttt-data^=abc]{ /* abc로 시작하는 것 : abc,abc-qwe */
+            text-align: center;
+        }
+        div[ttt-data$=abc]{ /* abc, zzevfeabc */
+            background-color: #ff0;
+        }
+        .abc{
+            background-color: #f0f;
+        }
+        .bbb{
+            font-size: 2rem;
+        }
+        .ccc{
+            text-align: right;
+        }
+        /* .abc .bbb{
+            color: #0f0;
+        } */
+        div[class="abc bbb"]{
+            color: #0f0;
+        }
+
+        /*  jpg, jpeg : 테두리색 빨강
+            BMP, GIF : 테두리색 파랑
+            PNG : 테두리색 녹색 */
+        img[data=a]{
+            width: 100px;
+            border: 3px solid red;
+        }
+        img[data=b]{
+            width: 100px;
+            border: 3px solid red;
+        }
+        img[data=c]{
+            width: 100px;
+            border: 3px solid green;
+        }
+        img[data=d]{
+            width: 100px;
+            border: 3px solid blue;
+        }
+        img[data=e]{
+            width: 100px;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>11_attribute</h1>
+    <div ttt-dat="abc">abc</div>
+    <div ttt-data="eee">eee</div>
+    <div ttt-data="abc_qwe">abc_qwe</div>
+    <div ttt-data="abc_qwe">abc_qwe</div>
+    <div ttt-data="aabasdfadsfgsdc">aabasdfadsfgsdc</div>
+    <div ttt-data="zzabcewew">zzabcewew</div>
+    <div ttt-data="zz abc fdew">zz abc fdew</div>
+    <div ttt-data="zz_abc_fdew">zz_abc_fdew</div>
+    <div ttt-data="zzevfeabc">zzevfeabc</div>
+    <div class="abc bbb">abc bbb</div>
+    <div class="abc ccc">abc ccc</div>
+    <img data="a" src="../ffffff/1.jpg" alt="">
+    <img data="b" src="../ffffff/1.jpeg" alt="">
+    <img data="c" src="../ffffff/1.png" alt="">
+    <img data="d" src="../ffffff/1.bmp" alt="">
+    <img data="e" src="../ffffff/1.gif" alt="">
+</body>
+</html>

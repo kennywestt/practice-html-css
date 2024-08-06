@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_char</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        p::first-letter{
+            background-color: #ff0;
+            font-size: 2rem;
+            padding: 2px;
+            border: 2px solid #00f;
+        }
+        p::first-line{
+            font-style: italic;
+        }
+        p:not(.asdf){
+            background-color: #0f0;
+        }
+        p::selection{
+            color: #f00;
+            background-color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <h1>12_char</h1>
+    <p>Lorem, ipsum dolorsit amet consectetur adipisicing <br>
+        elit. Ex, similique cum sequi natus illum aspernatur<br>
+        facilis qui atque facere et autem in odio,<br>
+        est pariatur soluta quaerat quae minima reiciendis.</p>
+
+    <p class="asdf">Lorem, ipsum dolorsit amet consectetur adipisicing <br>
+            elit. Ex, similique cum sequi natus illum aspernatur<br>
+            facilis qui atque facere et autem in odio,<br>
+            est pariatur soluta quaerat quae minima reiciendis.</p>
+
+    <p>Lorem, ipsum dolorsit amet consectetur adipisicing <br>
+                elit. Ex, similique cum sequi natus illum aspernatur<br>
+                facilis qui atque facere et autem in odio,<br>
+                est pariatur soluta quaerat quae minima reiciendis.</p>
+</body>
+</html>
