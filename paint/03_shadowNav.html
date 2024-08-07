@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_shadowNav</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 전체 래핑 */
+        .wrapper{
+            width: 500px;
+            height: 1200px;
+            background-color: #ff0;
+            position: absolute;
+            left: 50%;
+            top: 150px;
+            margin-left: -250px;
+        }
+
+        /* 헤더 */
+        .wrapper > div:first-child{
+            width: 500px;
+            height: 100px;
+            background-color: #fa0;
+            position: relative;
+        }
+        /* 로고 */
+        .wrapper > div:first-child > div:first-child{
+            width: 100px;
+            height: 100px;
+            font-size: 2rem;
+            line-height: 100px;
+            text-align: center;
+            float: left;
+        }
+
+        /* 로그인 마이페이지, 회원가입 */
+        .wrapper > div:first-child > div:last-child{
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin-top: 0px;
+            float: right;
+            background-color: #0f0;
+        }
+
+        /* section (wrapper의 2번째 자식) */
+        .wrapper > div:nth-child(2){
+            width: 500px;
+            height: 1000px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* wrapper에 2번째 자식인 div의 형제 img */
+        .wrapper > div:nth-child(2) > img{
+            width: 200px;
+            margin: 20px;
+        }
+
+        .wrapper > div:nth-child(3){
+            width: 500px;
+            height: 200px;
+            background-color: #0f0;
+            position: relative;
+        }
+
+        .nav{
+            width: 500px;
+            height: 100px;
+            background-color: rgb(255, 0, 255, 0.4);
+            position: fixed;
+            left: 50%;
+            top: 50px;
+            margin-left: -250px;
+            z-index: 1;
+            box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.7);
+        }
+
+        /* 사이드메뉴 */
+        .menu{
+            width: 170px;
+            height: 350px;
+            background-color: rgba(0, 255, 0, 0.4);
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            position: fixed;
+            top: 25%;
+            right: 40px;
+            margin-left: -250px;
+            z-index: 1;
+            box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.7);
+            text-align: center;
+            /* counter-reset: num; */
+        }
+        /* .menu >a::before{
+            position: absolute;
+            counter-increment: num;
+            content: counter(num);
+        } */
+        .menu > a:last-child{
+            width: 150px;
+            height: 30px;
+            font-size: 1rem;
+            background-color: cadetblue;
+        }
+        .menu > a > img{
+            position: relative;
+            width: 150px;
+            height: 60px;
+            margin: 5px 5px 5px 0px;
+        }
+        
+        .top{
+            position: relative;
+            width: 130px;
+            height: 30px;
+            top: 20px;
+            color: red;
+
+        }
+
+        /* 최근 본 상품 이미지 3개 */
+    </style>
+</head>
+<body>
+    <h1 id="tt">03_shadowNav</h1>
+    <div class="nav">난 메뉴바지롱</div>
+    <div class="wrapper">
+        <div>
+            <div>로고</div>
+            
+            <div>로그인 | 마이페이지 | 회원가입</div>
+        </div>
+        <div>
+            <img src="../ffffff/blue.jpg" alt="" align="left" id="blue">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci minima laboriosam culpa voluptas, incidunt
+            ullam magni reiciendis maxime saepe repellendus earum sint
+            similique, aliquam nam nesciunt. Maiores dolor officia sint.
+            <img src="../ffffff/red.jpg" alt="" align="left" id="red">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci minima laboriosam culpa voluptas, incidunt
+            ullam magni reiciendis maxime saepe repellendus earum sint
+            similique, aliquam nam nesciunt. Maiores dolor officia sint.
+            <img src="../ffffff/yellow.jpg" alt="" align="left" id="yellow">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci minima laboriosam culpa voluptas, incidunt
+            ullam magni reiciendis maxime saepe repellendus earum sint
+            similique, aliquam nam nesciunt. Maiores dolor officia sint.
+            <img src="../ffffff/10.jpg" alt="" align="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci minima laboriosam culpa voluptas, incidunt
+            ullam magni reiciendis maxime saepe repellendus earum sint
+            similique, aliquam nam nesciunt. Maiores dolor officia sint.
+            <img src="../ffffff/9.jpg" alt="" align="left">
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Adipisci minima laboriosam culpa voluptas, incidunt
+            ullam magni reiciendis maxime saepe repellendus earum sint
+            similique, aliquam nam nesciunt. Maiores dolor officia sint.
+        </div>
+
+        <div>
+            푸터
+        </div>
+
+        <div class="menu">
+            <a href="#blue"><img src="../ffffff/blue.jpg" alt="">blue image</a>
+            <a href="#red"><img src="../ffffff/red.jpg" alt="">white image</a>
+            <a href="#yellow"><img src="../ffffff/yellow.jpg" alt="">green image</a><br>
+            <a class="top" href="#tt">맨위로↑</a>
+        </div>
+    </div>
+</body>
+</html>
