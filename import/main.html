@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>import</title>
+    <style>
+        section{
+            background-color: #ff0;
+        }
+        section > div:nth-child(3){
+            background-color: #0f0;
+        }
+    </style>
+    <link rel="stylesheet" href="aaa.css">
+    <link rel="stylesheet" href="../cs_ff/bbb.css">
+    <style>
+        section > div:nth-child(3){
+            background-color: #0af;
+        }
+    </style>
+</head>
+<body>
+    <h1>import</h1>
+    <h2>section</h2>
+    <section>
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+    </section>
+
+    <style>
+        article > div:nth-child(1){
+            background-color: #f00;
+        }
+
+        /* html 로드시 style 먼저 로드 후 화면 구현 */
+        section > div:nth-child(4){
+            background-color: #afa;
+        }
+        section > div:nth-child(3){
+            background-color: #aaa;
+        }
+    </style>
+    <link rel="stylesheet" href="../cs_ff/ccc.css">
+    <h2>article</h2>
+    <article>
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+        <div>box4</div>
+        <div>box5</div>
+    </article>
+</body>
+</html>

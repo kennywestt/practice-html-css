@@ -1,0 +1,7 @@
+
+section{
+            background-color: #faa;
+        }
+        section > div:nth-child(3){
+            background-color: #00f;
+        }

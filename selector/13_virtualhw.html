@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
         }
+        /* 래퍼 */
         .wrapper{
             position: relative;
             width: 800px;
@@ -18,6 +19,7 @@
             margin: 0px 100px;
         }
 
+        /* 한줄 */
         .long{
             position: absolute;
             width: 2300px;
@@ -38,6 +40,8 @@
             left: 200px;
             top: -5px;
         } */
+
+        /* 박스이미지 */
         .box{
             width: 250px;
             height: 500px;
@@ -50,8 +54,25 @@
             
         }
         
+        .ddd{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            text-align: center;
+            line-height: 60px;
+            background-color: #ff0;
+            width: 60px;
+            height: 60px;
+            border-radius: 45px;
+            z-index: 5;
+            counter-reset: var-count;
+        }
+        .box > .ddd::after{
+            counter-increment: var-count; /* 1씩 증가 */
+            content: counter(var-count);
+        }
 
-        .box > p::before {
+        /* .box > p::before {
             content: "BEST 1";
             display: block;
             text-align: center;
@@ -64,7 +85,7 @@
             position: absolute;
             left: 200px;
             top: -5px;
-        }
+        } */
 
         img{
             width: 250px;
@@ -124,15 +145,15 @@
     <h1 id="num1">상세정보</h1>
     <div class="wrapper">
     <div class="long">
-        <div class="box box2"> <img src="../ffffff/img/apple_image01.jpg" alt=""><p>BEST</p><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
-        <div class="box box2"> <img src="../ffffff/img/apple_image02.jpg" alt=""><p>BEST</p><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
-        <div class="box box2"> <img src="../ffffff/img/apple_image03.jpg" alt=""><p>BEST</p><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
-        <div class="box"> <img src="../ffffff/img/apple_image01.jpg" alt=""><p></p><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
-        <div class="box"> <img src="../ffffff/img/apple_image02.jpg" alt=""><p></p><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
-        <div class="box"> <img src="../ffffff/img/apple_image03.jpg" alt=""><p></p><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
-        <div class="box"> <img src="../ffffff/img/apple_image01.jpg" alt=""><p></p><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
-        <div class="box"> <img src="../ffffff/img/apple_image02.jpg" alt=""><p></p><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
-        <div class="box"> <img src="../ffffff/img/apple_image03.jpg" alt=""><p></p><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"><p class="ddd">BEST</p><img src="../ffffff/img/apple_image01.jpg" alt=""><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
+        <div class="box"><p class="ddd">BEST</p><img src="../ffffff/img/apple_image02.jpg" alt=""><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"><p class="ddd">BEST</p><img src="../ffffff/img/apple_image03.jpg" alt=""><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image01.jpg" alt=""><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
+        <div class="box"> <img src="../ffffff/img/apple_image02.jpg" alt=""><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image03.jpg" alt=""><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image01.jpg" alt=""><h2>APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti sequi sit, pariatur vitae dolor reprehenderit recusandae accusantium est corporis quibusdam fugit rem autem labore, omnis ipsa tenetur eaque aut iusto!</div>
+        <div class="box"> <img src="../ffffff/img/apple_image02.jpg" alt=""><h2>ORANGE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
+        <div class="box"> <img src="../ffffff/img/apple_image03.jpg" alt=""><h2>GREEN APPLE</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas, nostrum deserunt quaerat nulla iste doloribus atque laboriosam similique harum officia, quod ea, saepe dolorum molestiae accusantium dolore vel corrupti.</div>
     </div>
     </div>
 

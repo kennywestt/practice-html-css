@@ -1,0 +1,11 @@
+article {
+    border: 2px solid #000;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg,
+    rgb(200, 200, 200) 0%,
+    rgb(138, 138, 138) 35%,
+    rgb(106, 106, 106) 65%,
+    rgb(75, 75, 75) 100%);
+}

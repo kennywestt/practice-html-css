@@ -1,0 +1,17 @@
+@import url("../cs_ff/header.css");
+@import url("../cs_ff/article.css");
+@import url("../cs_ff/section.css");
+@import url("../cs_ff/aside.css");
+@import url("../cs_ff/footer.css");
+@import url("../cs_ff/main.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 1100px;
+    height: 800px;
+}
+
