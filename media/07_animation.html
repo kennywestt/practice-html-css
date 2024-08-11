@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        hr{
+            height: 5px;
+            background-color: aquamarine;
+        }
+        wrapper{
+            position: relative;
+            display: block;
+            width: 800px;
+            height: 500px;
+        }
+        wrapper > div{
+            position: relative;
+            left: 0px;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: #faa;
+            text-align: center;
+        }
+
+        /* keyframes */
+
+        @keyframes leftToRight{
+            from{
+                left: 100px;
+            }
+            to{
+                left: 300px;
+            }
+        }
+
+        @keyframes leftStep{
+            0%{
+                left: 100px;
+                top: 0px
+            }
+            50%{
+                left: 300px;
+                top: 0px;
+            }
+            100%{
+                left: 300px;
+                top: 50px;
+            }
+        }
+        @keyframes pinkYellowBlue{
+            0%{
+                background-color: #faa;
+                left: 100px;
+                top: 0px
+            }
+            50%{
+                background-color: #ff0;
+                left: 300px;
+                top: 50px;
+            }
+            100%{
+                background-color: #0ff;
+                left: 300px;
+                top: 0px;
+            }
+        }
+        
+        wrapper:nth-of-type(1) > div:nth-child(1){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+        }
+
+        wrapper:nth-of-type(1) > div:nth-child(2){
+            animation-name: leftStep;
+            animation-duration: 3s;
+        }
+        wrapper:nth-of-type(1) > div:nth-child(3){
+            animation-name: pinkYellowBlue;
+            animation-duration: 3s;
+        }
+
+        /* animation-iteration-count */
+        wrapper:nth-of-type(2) > div:nth-child(1){
+            animation-name: leftToRight;
+            animation-duration: 3s; /* 1번 움직일 때 시간 */
+            animation-iteration-count: 3; /* 1회 기본값*/
+        }
+
+        wrapper:nth-of-type(2) > div:nth-child(2){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-iteration-count: 3; /* 3회 반복*/
+        }
+
+        wrapper:nth-of-type(2) > div:nth-child(3){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-iteration-count: infinite; /* 무한 반복*/
+        }
+
+        /* animation-direction */
+        wrapper:nth-of-type(3) > div:nth-child(1){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-direction: normal;
+        }
+        wrapper:nth-of-type(3) > div:nth-child(2){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-direction: reverse;
+        }
+        wrapper:nth-of-type(3) > div:nth-child(3){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-direction: alternate;
+        }
+        wrapper:nth-of-type(3) > div:nth-child(4){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-direction: alternate; /* 왕복 => 홀수: 정방향, 짝수: 역방향*/
+            animation-iteration-count: 4;
+        }
+        wrapper:nth-of-type(3) > div:nth-child(5){
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-direction: alternate-reverse;
+        }
+
+        /* animation-play-state */
+        wrapper:nth-of-type(4) > div{
+            animation-name: leftToRight;
+            animation-duration: 3s;
+        }
+        wrapper:nth-of-type(4) > div:nth-of-type(1):hover{
+            animation-play-state: paused; /* 일시정지 */
+        }
+
+        wrapper:nth-of-type(4) > div:nth-of-type(2):hover{
+            animation-play-state: running; /* 기본값 실행 */
+        }
+
+        /* animation-fill-mode */
+        wrapper:nth-of-type(5) > input ~ div{
+            animation-name: leftToRight;
+            animation-duration: 3s;
+            animation-play-state: paused;
+        }
+        wrapper:nth-of-type(5) > input:checked ~ div{
+            animation-play-state: running;
+        }
+        wrapper:nth-of-type(5) > input:nth-of-type(1){
+            animation-fill-mode: none; /* 기본값 none */
+        }
+        wrapper:nth-of-type(5) > div:nth-of-type(2){
+            animation-fill-mode: forwards; /* 대기: ,종료: 종료 후 마지막 프레임 style 적용 */
+        }
+        wrapper:nth-of-type(5) > div:nth-of-type(3){
+            /*  대기: 대기 시 시작프레임 style 적용,
+                종료: 종료 후 기본 프레임 style 적용 */
+            animation-fill-mode: backwards;
+        }
+        wrapper:nth-of-type(5) > div:nth-of-type(4){
+            /*  대기: 대기 시 시작프레임 style 적용,
+                종료: 종료 후 기본 프레임 style 적용 */
+            animation-fill-mode: both;
+        }
+
+        /* total */
+        wrapper:nth-of-type(6) > div:nth-of-type(1){
+            animation: leftToRight 3s ease 0s 1 none running none;
+        /* name, duration, time-function, delay, iteration-count,
+             direction, fill-mode, playstate
+            name, duration은 필수 */
+        }
+
+        wrapper:nth-of-type(6) > div:nth-of-type(1){
+            animation: leftToRight 3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>07_animation</h1>
+    <h2>keyframe</h2>
+    <wrapper>
+        <div>leftToRight</div>
+        <div>leftStep</div>
+        <div>pinkYellowBlue</div>
+    </wrapper>
+<hr>
+    <h2>animation-iteration-count</h2>
+    <wrapper>
+        <div>iteration1</div>
+        <div>iteration2</div>
+        <div>infinite</div>
+    </wrapper>
+<hr>
+    <h2>animation-direction</h2>
+    <wrapper>
+        <div>normal</div>
+        <div>reverse</div>
+        <div>alternate</div>
+        <div>alter-even</div>
+        <div>alter-reverse</div>
+    </wrapper><br><br><br><br><br>
+<hr>
+    <h2>animation-play-state</h2>
+    <wrapper>
+        <div>1</div>
+        <div>paused</div>
+        <div>running</div>
+    </wrapper>
+<hr>
+    <h2>animation-fill-mode</h2>
+    <wrapper>
+        <input type="checkbox">
+        <div>none</div>
+        <div>forward</div>
+        <div>backwards</div>
+        <div>both</div>
+    </wrapper>
+    <br><br>
+<hr>
+    <h2>total</h2>
+    <wrapper>
+        <div>전체</div>
+        <div>필수</div>
+    </wrapper>
+</body>
+</html>

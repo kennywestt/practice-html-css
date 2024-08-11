@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        hr{
+            height: 5px;
+            background-color: aquamarine;
+        }
+
+        div{
+            position: relative;
+            left: 0px;
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            margin: 5px;
+            text-align: center;
+        }
+        input:checked + div{
+            background-color: #00f;
+            border-radius: 100px;
+            width: 150px;
+            height: 150px;
+            left: 300px;
+        }
+        div:nth-of-type(2){
+            /* 프로퍼티 : 대상만 지연효과 */
+            transition-property: width;
+            transition-duration: 2s;
+        }
+        div:nth-of-type(3){
+            /* 프로퍼티 : 전체 지연효과 */
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        div:nth-of-type(4){
+            /* 프로퍼티 : width, left */
+            transition-property: width, left;
+            transition-duration: 2s;
+        }
+        div:nth-of-type(5){
+            /* 프로퍼티 : width, left 각 시간 따로*/
+            transition-property: width, left;
+            transition-duration: 4s , 1s;
+        }
+        div:nth-of-type(6){
+            /* 프로퍼티 : width, left 각 시간 따로*/
+            transition-property: width 4s, left 1s;
+            /* transition-duration: 4s , 1s; */
+        }
+
+        /* duration - 시간 지연 */
+        div:nth-of-type(7){
+            transition-duration: 0.5s;
+        }
+        div:nth-of-type(8){
+            /* 1s = 1000ms */
+            transition-duration: 500ms;
+        }
+
+        /* timing function */
+        .timing_fn:checked ~ div{
+            width: 50px;
+            height: 50px;
+            background-color: #f00;
+            border-radius: 0px;
+            left: 300px;
+            transition-duration: 2s;
+        }
+
+        .timing_fn:checked +div{
+            transition-timing-function: ease;
+        }
+        .timing_fn:checked +div+div{
+            transition-timing-function: linear;
+        }
+        .timing_fn:checked +div+div+div{
+            transition-timing-function: ease-in;
+        }
+        .timing_fn:checked +div+div+div+div{
+            transition-timing-function: ease-out;
+        }
+        .timing_fn:checked +div+div+div+div+div{
+            transition-timing-function: ease-in-out;
+        }
+        .timing_fn:checked +div+div+div+div+div+div{
+            transition-timing-function: cubic-bezier(.09,1.04,.89,0);
+        }
+        .timing_fn:checked +div+div+div+div+div+div+div{
+            transition-timing-function: steps(3);
+        }
+        .timing_fn:checked +div+div+div+div+div+div+div+div{
+            transition-timing-function: steps(5);
+        }
+        .timing_fn:checked +div+div+div+div+div+div+div+div+div{
+            transition-timing-function: steps(5, start);
+        }
+        .timing_fn:checked +div+div+div+div+div+div+div+div+div+div{
+            transition-timing-function: steps(5, end);
+        }
+
+        /* transition delay */
+        .delay:checked ~ div{
+            width: 50px;
+            height: 50px;
+            background-color: #f00;
+            border-radius: 0px;
+            left: 300px;
+            transition-duration: 2s;
+        }
+
+        .delay:checked +div{
+            transition-delay: 0s;
+        }
+        .delay:checked +div+div{
+            transition-delay: 1s;
+        }
+        .delay:checked +div+div+div{
+            transition-delay: 3s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>05_transition</h1>
+    <h2>1. 기본</h2>
+    <input type="checkbox">
+    <div></div>
+    <h2>2. transition-property</h2>
+    <input type="checkbox">
+    <div></div>
+    <h2>3. transition-property: all</h2>
+    <input type="checkbox">
+    <div></div>
+    <h2>4. transition-property: 속성 2개, 지속시간 1개</h2>
+    <input type="checkbox">
+    <div></div>
+    <h2>5. transition-property: 속성 2개, 지속시간 2개 </h2>
+    <input type="checkbox">
+    <div></div>
+    <h2>6. transition-property: 속성 2개에 지속시간 함께 </h2>
+    <input type="checkbox">
+    <div></div><br><hr><br>
+
+    <h1>transition_duration</h1>
+    <h2>1. 기본 0.5s</h2>
+    <input type="checkbox">
+    <div></div>
+    <h2>2. transition_duration 500ms</h2>
+    <input type="checkbox">
+    <div></div><br><hr><br>
+
+    <h1>timing function</h1>
+    <h2>기본</h2>
+    <input type="checkbox" class="timing_fn">
+    <div>ease</div>
+    <div>linear</div>
+    <div>ease-in</div>
+    <div>ease-out</div>
+    <div>ease-in-out</div>
+    <div>cubic-bezier</div>
+    <div>steps3</div>
+    <div>steps5</div>
+    <div>steps5-start</div>
+    <div>steps5-end</div><br><hr><br>
+
+    <h1>4 transition-delay</h1>
+    <input type="checkbox" class="delay">
+    <div>0s</div>
+    <div>1s</div>
+    <div>3s</div>
+</body>
+</html>

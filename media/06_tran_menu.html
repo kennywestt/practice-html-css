@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_tran_menu</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    nav{
+        position: relative;
+        width: 800px;
+        height: 50px;
+        left: 100px;
+    }
+    nav > div{
+        position: relative;
+        width: 200px;
+        background-color: #ff0;
+        height: 50px;
+        float: left;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    nav > div > div{
+        position: absolute;
+        width: 180px;
+        height: 50px;
+        background-color: rgba(0, 255, 0, 0.5);
+        left: -800px;
+        top: 0px;
+        z-index: 1;
+        text-align: center;
+        line-height: 50px;
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        box-shadow: 3px 3px 5px #000;
+    }
+
+    nav > div:hover > div{
+        left: 0px;
+        transform: skewY(30deg);
+    }
+</style>
+<body>
+    <h1>06_tran_menu</h1>
+    <nav>
+        <div>회사소개<div></div></div>
+        <div>제품<div></div></div>
+        <div>갤러리<div></div></div>
+        <div>고객센터<div></div></div>
+    </nav>
+</body>
+</html>
