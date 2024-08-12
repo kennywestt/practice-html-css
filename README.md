@@ -12,7 +12,7 @@ HTML, CSS practice
 ##CSS##
 1.Div
 2.Font
-3.Display
+3.Display (flex)
 4.Overflow
 5.Position
 6.Selector
